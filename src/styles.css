@@ -1,0 +1,29 @@
+body {
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  background-color: rgba(229, 234, 253);
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+select {
+  display: block;
+  margin: 0px auto;
+}
+
+.clocks-app {
+  width: 600px;
+  margin: 25px auto;
+  border: 1px solid #000;
+}
+
+.world-clocks {
+  border: 1px solid #000;
+}
+.clock {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
