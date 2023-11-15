@@ -31,7 +31,7 @@ a {
 }
 
 .clocks-app {
-  width: 600px;
+  width: 550px;
   margin: 30px auto;
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   border: 1px solid #000;
@@ -45,7 +45,6 @@ a {
 .clock {
   display: flex;
   justify-content: space-between;
-  padding: 25px;
   border: 1px solid #000;
 }
 
