@@ -9,13 +9,13 @@ setInterval(function () {
   let userTime = moment().format("ddd, MMM D, YYYY");
 
   if (knoxvilleDate === userTime) {
-    knoxvilleTodayElement.innerHTML = "TODAY";
+    knoxvilleTodayElement.innerHTML = "Today";
   } else {
     if (knoxvilleDate < userTime) {
-      knoxvilleTodayElement.innerHTML = "YESTERDAY";
+      knoxvilleTodayElement.innerHTML = "Yesterday";
     } else {
       if (knoxvilleDate > userTime) {
-        knoxvilleTodayElement.innerHTML = "TOMORROW";
+        knoxvilleTodayElement.innerHTML = "Tomorrow";
       }
     }
   }
@@ -38,13 +38,13 @@ setInterval(function () {
   let userTime = moment().format("ddd, MMM D, YYYY");
 
   if (brisbaneDate === userTime) {
-    brisbaneTodayElement.innerHTML = "TODAY";
+    brisbaneTodayElement.innerHTML = "Today";
   } else {
     if (brisbaneDate < userTime) {
-      brisbaneTodayElement.innerHTML = "YESTERDAY";
+      brisbaneTodayElement.innerHTML = "Yesterday";
     } else {
       if (brisbaneDate > userTime) {
-        brisbaneTodayElement.innerHTML = "TOMORROW";
+        brisbaneTodayElement.innerHTML = "Tomorrow";
       }
     }
   }
