@@ -53,3 +53,11 @@ setInterval(function () {
   brisbaneDateElement.innerHTML = brisbaneDate;
   brisbaneAmPmElement.innerHTML = brisbaneAmPm;
 }, 1000);
+
+function displayTime(event) {
+  let cityTimezone = event.target.value;
+  let cityTime = moment().tz(cityTimezone).format("ddd, MMM D, YYYY");
+}
+
+citySelectElement = document.querySelector("#cities");
+citySelectElement.addEventListener("change", displayTime);
