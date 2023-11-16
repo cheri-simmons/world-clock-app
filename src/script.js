@@ -27,8 +27,51 @@ let localDate = moment().format("MMM D, YYYY");
 /* new code below */
 function displayClock(event) {
   let cityTimezone = event.target.value;
+  let selectedClockElement = document.querySelector("#selected-clock");
 
-  /* add if value < 1 condition later */
+  if (cityTimezone.length === 0) {
+    return;
+  } else {
+    let selectedCity = cityTimezone.split("/")[1].replace("_", " ");
+    let selectedZone = cityTimezone.split("/")[0].replace("_", " ");
+    let selectedTime = moment().tz(cityTimezone).format("h:mm:ss");
+    let selectedDay = moment().tz(cityTimezone).format("ddd, ");
+    let selectedDate = moment().tz(cityTimezone).format("MMM D, YYYY");
+    let selectedAmPm = moment().tz(cityTimezone).format("A");
+    let selectedToday;
+
+    if (selectedDate === localDate) {
+      selectedToday = "Today";
+    } else {
+      if (selectedDate < localDate) {
+        selectedToday = "Yesterday";
+      } else {
+        if (selectedDate > localDate) {
+          selectedToday = "Tomorrow";
+        }
+      }
+    }
+
+    selectedClockElement.innerHTML = `<div class="clock">
+            <div class="clock-left">
+              <div class="city" id="selected-city">${selectedCity}</div>
+              <div class="zone" id="selected-zone">// ${selectedZone}</div>
+            </div>
+            <div class="clock-right">
+              <div>
+                <div class="today" id="selected-today">${selectedToday}</div>
+                <div>
+                  <span class="time" id="selected-time">${selectedTime}</span
+                  ><span class="am-pm" id="selected-am-pm">${selectedAmPm}</span>
+                </div>
+                <div class="date">
+                  <span id="selected-day">${selectedDay}</span
+                  ><span id="selected-date">${selectedDate}</span>
+                </div>
+              </div>
+            </div>
+          </div>`;
+  }
 }
 
 let citySelectElement = document.querySelector("#cities");

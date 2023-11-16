@@ -24,12 +24,12 @@ footer {
   text-align: center;
   font-size: 12px;
   padding: 5px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
   border-top: 1px dotted rgba(0, 0, 0, 0.1);
 }
 
 a {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .clocks-app {
@@ -68,7 +68,7 @@ a {
   letter-spacing: 1px;
 }
 
-.country {
+.zone {
   font-size: 18px;
   font-weight: 450;
   letter-spacing: 1px;
