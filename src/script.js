@@ -5,7 +5,7 @@ setInterval(function () {
   let localCityElement = document.querySelector("#local-city");
   let localZoneElement = document.querySelector("#local-zone");
   localCityElement.innerHTML = localCity;
-  localZoneElement.innerHTML = localZone;
+  localZoneElement.innerHTML = `// ${localZone}`;
 
   let localTimeElement = document.querySelector("#local-time");
   let localDayElement = document.querySelector("#local-day");
