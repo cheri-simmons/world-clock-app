@@ -1,4 +1,12 @@
 setInterval(function () {
+  let localTimezone = moment.tz.guess();
+  let localCity = localTimezone.split("/")[1].replace("_", " ");
+  let localZone = localTimezone.split("/")[0].replace("_", " ");
+  let localCityElement = document.querySelector("#local-city");
+  let localZoneElement = document.querySelector("#local-zone");
+  localCityElement.innerHTML = localCity;
+  localZoneElement.innerHTML = localZone;
+
   let localTimeElement = document.querySelector("#local-time");
   let localDayElement = document.querySelector("#local-day");
   let localDateElement = document.querySelector("#local-date");
