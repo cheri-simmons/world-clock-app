@@ -56,6 +56,9 @@ a {
 }
 
 .clock-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px;
   text-align: right;
   border: 1px solid #000;
@@ -75,7 +78,8 @@ a {
 }
 
 .date,
-.today {
+.today,
+.your-local {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;

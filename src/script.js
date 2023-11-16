@@ -25,6 +25,7 @@ setInterval(function () {
 let localDate = moment().format("MMM D, YYYY");
 
 /* new code below */
+
 function displayClock(event) {
   let cityTimezone = event.target.value;
   let selectedClockElement = document.querySelector("#selected-clock");
@@ -32,27 +33,28 @@ function displayClock(event) {
   if (cityTimezone.length === 0) {
     return;
   } else {
-    let selectedCity = cityTimezone.split("/")[1].replace("_", " ");
-    let selectedZone = cityTimezone.split("/")[0].replace("_", " ");
-    let selectedTime = moment().tz(cityTimezone).format("h:mm:ss");
-    let selectedDay = moment().tz(cityTimezone).format("ddd, ");
-    let selectedDate = moment().tz(cityTimezone).format("MMM D, YYYY");
-    let selectedAmPm = moment().tz(cityTimezone).format("A");
-    let selectedToday;
+    setInterval(function () {
+      let selectedCity = cityTimezone.split("/")[1].replace("_", " ");
+      let selectedZone = cityTimezone.split("/")[0].replace("_", " ");
+      let selectedTime = moment().tz(cityTimezone).format("h:mm:ss");
+      let selectedDay = moment().tz(cityTimezone).format("ddd, ");
+      let selectedDate = moment().tz(cityTimezone).format("MMM D, YYYY");
+      let selectedAmPm = moment().tz(cityTimezone).format("A");
+      let selectedToday;
 
-    if (selectedDate === localDate) {
-      selectedToday = "Today";
-    } else {
-      if (selectedDate < localDate) {
-        selectedToday = "Yesterday";
+      if (selectedDate === localDate) {
+        selectedToday = "Today";
       } else {
-        if (selectedDate > localDate) {
-          selectedToday = "Tomorrow";
+        if (selectedDate < localDate) {
+          selectedToday = "Yesterday";
+        } else {
+          if (selectedDate > localDate) {
+            selectedToday = "Tomorrow";
+          }
         }
       }
-    }
 
-    selectedClockElement.innerHTML = `<div class="clock">
+      selectedClockElement.innerHTML = `<div class="clock">
             <div class="clock-left">
               <div class="city" id="selected-city">${selectedCity}</div>
               <div class="zone" id="selected-zone">// ${selectedZone}</div>
@@ -71,6 +73,7 @@ function displayClock(event) {
               </div>
             </div>
           </div>`;
+    }, 1000);
   }
 }
 
