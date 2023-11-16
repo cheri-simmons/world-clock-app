@@ -56,7 +56,11 @@ setInterval(function () {
 
 function displayTime(event) {
   let cityTimezone = event.target.value;
-  let cityTime = moment().tz(cityTimezone).format("ddd, MMM D, YYYY");
+  if (cityTimezone.length < 1) {
+    return;
+  } else {
+    let cityDate = moment().tz(cityTimezone).format("ddd, MMM D, YYYY");
+  }
 }
 
 citySelectElement = document.querySelector("#cities");
