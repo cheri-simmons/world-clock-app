@@ -68,7 +68,12 @@ a {
   letter-spacing: 1px;
 }
 
-.country,
+.country {
+  font-size: 18px;
+  font-weight: 450;
+  letter-spacing: 1px;
+}
+
 .date,
 .today {
   font-size: 14px;
