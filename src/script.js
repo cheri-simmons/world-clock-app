@@ -52,15 +52,3 @@ setInterval(function () {
   brisbaneDateElement.innerHTML = brisbaneDate;
   brisbaneAmPmElement.innerHTML = brisbaneAmPm;
 }, 1000);
-
-function displayTime(event) {
-  let cityTimezone = event.target.value;
-  if (cityTimezone.length < 1) {
-    return;
-  } else {
-    let cityDate = moment().tz(cityTimezone).format("ddd, MMM D, YYYY");
-  }
-}
-
-citySelectElement = document.querySelector("#cities");
-citySelectElement.addEventListener("change", displayTime);
