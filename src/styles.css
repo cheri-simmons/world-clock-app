@@ -12,6 +12,17 @@ h1 {
   letter-spacing: 5px;
 }
 
+.title {
+  background: #000736;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #000736 0%,
+    #585d7a 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 select {
   display: block;
   margin: 0px auto 15px auto;
