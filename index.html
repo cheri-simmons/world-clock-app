@@ -19,6 +19,7 @@
       <header>
         <h1>World Clocks 🕒</h1>
       </header>
+      <div><a href="index.html" class="reset-link" id="reset">Reset</a></div>
       <main>
         <select name="city" id="cities">
           <option value="">Select a city...</option>
@@ -26,11 +27,12 @@
           <option value="America/Anchorage">Anchorage, USA</option>
           <option value="Europe/Stockholm">Stockholm, Sweden</option>
         </select>
+
         <div class="world-clocks">
           <div id="local-clock">
             <div class="clock">
               <div class="clock-left">
-                <div class="your-local">YOUR TIME ZONE :</div>
+                <div class="your-selected">YOUR TIME ZONE :</div>
                 <div class="city" id="local-city"></div>
                 <div class="zone" id="local-zone"></div>
               </div>

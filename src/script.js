@@ -74,6 +74,10 @@ function displayClock(event) {
             </div>
           </div>`;
     }, 1000);
+
+    let resetLinkElement = document.querySelector("#reset");
+    citySelectElement.style.display = "none";
+    resetLinkElement.style.display = "block";
   }
 }
 
