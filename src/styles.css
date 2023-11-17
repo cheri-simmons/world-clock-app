@@ -46,18 +46,15 @@ footer a {
 
 .world-clocks {
   margin: 10px auto;
-  border: 1px solid #000;
 }
 
 .clock {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #000;
 }
 
 .clock-left {
   padding: 20px;
-  border: 1px solid #000;
 }
 
 .clock-right {
@@ -66,7 +63,6 @@ footer a {
   justify-content: center;
   padding: 20px;
   text-align: right;
-  border: 1px solid #000;
 }
 
 .city,

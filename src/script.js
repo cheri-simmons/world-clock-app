@@ -22,10 +22,6 @@ setInterval(function () {
   localAmPmElement.innerHTML = localAmPm;
 }, 1000);
 
-let localDate = moment().format("MMM D, YYYY");
-
-/* new code below */
-
 function displayClock(event) {
   let cityTimezone = event.target.value;
   let selectedClockElement = document.querySelector("#selected-clock");
@@ -81,5 +77,6 @@ function displayClock(event) {
   }
 }
 
+let localDate = moment().format("MMM D, YYYY");
 let citySelectElement = document.querySelector("#cities");
 citySelectElement.addEventListener("change", displayClock);
